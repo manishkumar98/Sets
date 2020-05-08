@@ -1,0 +1,50 @@
+/* Java program for Multidimensional LinkedHashSet */
+
+import java.util.*; 
+
+class MultidimensionalLinkedHashSet { 
+
+	/*function for creating and returning 2D LinkedHashSet*/
+	static Set create2DLinkedHashSet() 
+	{ 
+		/*Declaring 2D LinkedHashSet*/
+		LinkedHashSet<LinkedHashSet<String> > x 
+			= new LinkedHashSet<LinkedHashSet<String> >(); 
+
+		/*Creating 1st row */
+		x.add(new LinkedHashSet<String>( 
+			Arrays.asList("Apple", "Orange"))); 
+
+		// Creating 2nd row, here "Coffee" will be 
+		// considered as only one object 
+		// to maintain uniqueness 
+		x.add(new LinkedHashSet<String>( 
+			Arrays.asList("Tea", 
+						"Coffee", 
+						"Milk", 
+						"Coffee", 
+						"Water"))); 
+
+		/* Creating 3rd row */
+		x.add(new LinkedHashSet<String>( 
+			Arrays.asList("Tomato", 
+						"Potato", 
+						"Onion"))); 
+
+		// Creating 4th row but it will not 
+		// be added as it contains the same items as 3rd row 
+		// (LinkedHashSet inserts only unique items) 
+		x.add(new LinkedHashSet<String>( 
+			Arrays.asList("Tomato", "Potato", "Onion"))); 
+
+		return x; 
+	} 
+
+	public static void main(String[] args) 
+	{ 
+		System.out.println("2D LinkedHashSet :"); 
+
+		/*Printing 2D LinkedHashSet*/
+		System.out.println(create2DLinkedHashSet()); 
+	} 
+} 
