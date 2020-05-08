@@ -1,0 +1,63 @@
+// Java program to iterate over an ArrayList 
+// using for loop 
+import java.util.*; 
+class GFG { 
+	public static void main(String[] args) 
+	{ 
+
+		// initializing ArrayList 
+		List<Integer> numbers = Arrays.asList(1, 2, 3, 
+									4, 5, 6, 7, 8); 
+
+		// For Loop for iterating ArrayList 
+		for (int i = 0; i < numbers.size(); i++) 
+			System.out.print(numbers.get(i) + " ");		 
+	} 
+} 
+// Java program to iterate 
+// over an arraylist using for Each loop 
+import java.util.*; 
+class GFG { 
+
+	public static void main(String[] args) 
+	{ 
+		// initializing ArrayList 
+		List<Integer> numbers = Arrays.asList(1, 2, 3, 
+									4, 5, 6, 7, 8); 
+
+		// For Each Loop for iterating ArrayList 
+		for (Integer i : numbers) 
+			System.out.print(i + " "); 
+	} 
+} 
+// Java program to iterate over an arraylist 
+// using Iterator 
+import java.util.*; 
+class GFG { 
+	public static void main(String[] args) 
+	{ 
+		// initializing ArrayList 
+		List<Integer> numbers = Arrays.asList(1, 2, 3, 
+									4, 5, 6, 7, 8); 
+
+		// Looping ArrayList using Iterator 
+		Iterator it = numbers.iterator(); 
+		while (it.hasNext()) 
+			System.out.print(it.next() + " "); 
+	} 
+} 
+// Java program to iterate over an arraylist 
+// using Iterator 
+import java.util.*; 
+class GFG { 
+	public static void main(String[] args) 
+	{ 
+		// initializing ArrayList 
+		List<Integer> numbers = Arrays.asList(1, 2, 3, 
+									4, 5, 6, 7, 8); 
+
+		//lambda 
+		numbers.forEach(number->System.out.println(number)); 
+
+	} 
+} 
